@@ -20,7 +20,7 @@ const ProfilePage = () => {
       <Card className="card-gradient border-0">
         <CardContent className="p-6">
           <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-2xl animate-float">
+            <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-2xl shadow-lg">
               {user.avatar}
             </div>
             <div>
@@ -44,8 +44,8 @@ const ProfilePage = () => {
       <div className="grid grid-cols-2 gap-4">
         <Card className="card-gradient border-0">
           <CardContent className="p-4 text-center">
-            <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-r from-orange-300 to-yellow-300 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-warning flex items-center justify-center shadow-md">
+              <Zap className="w-6 h-6 text-warning-foreground" />
             </div>
             <p className="text-2xl font-bold text-primary">{user.streak}</p>
             <p className="text-sm text-muted-foreground">Day Streak</p>
@@ -54,8 +54,8 @@ const ProfilePage = () => {
 
         <Card className="card-gradient border-0">
           <CardContent className="p-4 text-center">
-            <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-300 flex items-center justify-center">
-              <Target className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-accent flex items-center justify-center shadow-md">
+              <Target className="w-6 h-6 text-accent-foreground" />
             </div>
             <p className="text-2xl font-bold text-primary">{user.points}</p>
             <p className="text-sm text-muted-foreground">Total Points</p>
@@ -115,9 +115,9 @@ const ProfilePage = () => {
           {user.badges.map((badge) => (
             <div
               key={badge.id}
-              className={`p-3 rounded-xl transition-all duration-300 ${
+              className={`p-3 rounded-xl transition-all duration-300 shadow-sm ${
                 badge.unlockedAt
-                  ? 'bg-gradient-to-r from-yellow-100 to-amber-100 badge-shine'
+                  ? 'bg-yellow-50 border border-yellow-200 badge-shine'
                   : 'bg-muted/50'
               }`}
             >

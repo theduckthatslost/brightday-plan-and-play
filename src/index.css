@@ -132,7 +132,7 @@
 
   body {
     @apply bg-background text-foreground font-poppins;
-    background: var(--gradient-primary);
+    background: hsl(var(--background));
     min-height: 100vh;
   }
 }
@@ -140,28 +140,28 @@
 @layer components {
   /* Card Variants */
   .card-gradient {
-    @apply bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm;
+    @apply bg-white;
     box-shadow: var(--shadow-card);
   }
 
   .card-work {
-    @apply bg-gradient-to-br;
-    background: linear-gradient(135deg, hsl(var(--work)) 0%, hsl(var(--work)) 100%);
+    @apply bg-work;
+    box-shadow: var(--shadow-soft);
   }
 
   .card-class {
-    @apply bg-gradient-to-br;
-    background: linear-gradient(135deg, hsl(var(--class)) 0%, hsl(var(--class)) 100%);
+    @apply bg-class;
+    box-shadow: var(--shadow-soft);
   }
 
   .card-meetup {
-    @apply bg-gradient-to-br;
-    background: linear-gradient(135deg, hsl(var(--meetup)) 0%, hsl(var(--meetup)) 100%);
+    @apply bg-meetup;
+    box-shadow: var(--shadow-soft);
   }
 
   .card-personal {
-    @apply bg-gradient-to-br;
-    background: linear-gradient(135deg, hsl(var(--personal)) 0%, hsl(var(--personal)) 100%);
+    @apply bg-personal;
+    box-shadow: var(--shadow-soft);
   }
 
   /* Button Animations */
@@ -207,8 +207,7 @@
 
   /* Mobile App Container */
   .mobile-container {
-    @apply max-w-sm mx-auto min-h-screen relative;
-    background: var(--gradient-primary);
+    @apply max-w-sm mx-auto min-h-screen relative bg-background;
   }
 
   /* Floating Action Button */

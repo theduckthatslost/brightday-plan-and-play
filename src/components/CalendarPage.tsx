@@ -123,7 +123,7 @@ const CalendarPage = () => {
                   className={cn(
                     'h-12 flex flex-col items-center justify-center text-sm relative cursor-pointer rounded-lg transition-colors duration-200 btn-bounce',
                     isTodayDate
-                      ? 'bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold'
+                      ? 'bg-primary text-primary-foreground font-bold shadow-md'
                       : isCurrentMonthDay
                       ? 'text-primary hover:bg-muted/50'
                       : 'text-muted-foreground/50'
@@ -211,7 +211,7 @@ const CalendarPage = () => {
                     <Button
                       size="sm"
                       onClick={() => completeEvent(event.id)}
-                      className="w-full bg-gradient-to-r from-green-400 to-emerald-400 hover:from-green-500 hover:to-emerald-500 text-white btn-bounce"
+                      className="w-full bg-success hover:bg-success/90 text-success-foreground btn-bounce shadow-md"
                     >
                       Mark Complete ✨
                     </Button>
